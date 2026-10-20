@@ -1,39 +1,35 @@
+body {
+    background: #6b64f3;
+}
+
 .FontCenterChange {
     text-align: center;
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 3.5rem;
     color: rgb(33, 235, 235);
+}
 
-}
-body {
-    background: #6b64f3;
-}
-.SmallerFontCenter
-{
+.SmallerFontCenter {
     text-align: center;
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 3rem;
     color: rgb(33, 235, 235);
 }
 
-
-.CreditFont
-{
+.CreditFont {
     text-align: center;
     font-size: 1.5em;
 }
 
 /* Button Stuff */
-/* Card layout container */
 .card-container {
     display: flex;
-    flex-wrap: wrap;          /* allows wrapping when needed */
-    gap: 1.5rem;              /* smooth spacing between cards */
-    justify-content: center;  /* centers cards horizontally */
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
     padding: 1rem;
 }
 
-/* Your existing card styles stay the same */
 .card {
   --bg-card: #27272a;
   --primary: #6d28d9;
@@ -54,18 +50,14 @@ body {
   border-radius: 1rem;
 }
 
-
 .image_container {
   overflow: hidden;
   cursor: pointer;
-
   position: relative;
   z-index: 5;
-
   width: 100%;
   height: 8rem;
   background-color: var(--primary-800);
-
   border-radius: 0.5rem;
 }
 
@@ -78,12 +70,9 @@ body {
   transform: none;
 }
 
-
 .title {
   overflow: clip;
-
   width: 100%;
-
   font-size: 1rem;
   font-weight: 600;
   color: var(--light);
@@ -101,7 +90,6 @@ body {
   display: flex;
   align-items: center;
   gap: 0.25rem;
-
   margin-top: 0.25rem;
 }
 
@@ -111,27 +99,22 @@ body {
 
 .list-size .item-list-button {
   cursor: pointer;
-
   padding: 0.5rem;
   background-color: var(--zinc-800);
-
   font-size: 0.75rem;
   color: var(--light);
-
   border: 2px solid var(--zinc-800);
   border-radius: 0.25rem;
-
   transition: all 0.3s ease-in-out;
 }
 
 .item-list-button:hover {
   border: 2px solid var(--light);
 }
+
 .item-list-button:focus {
   background-color: var(--primary);
-
   border: 2px solid var(--primary-shadow);
-
   box-shadow: inset 0px 1px 4px var(--primary-shadow);
 }
 
@@ -149,21 +132,17 @@ body {
 
 .cart-button {
   cursor: pointer;
-
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 0.25rem;
-
   padding: 0.5rem;
   width: 100%;
   background-image: var(--bg-linear);
-
   font-size: 0.75rem;
   font-weight: 500;
   color: var(--light);
   text-wrap: nowrap;
-
   border: 2px solid hsla(262, 83%, 58%, 0.5);
   border-radius: 0.5rem;
   box-shadow: inset 0 0 0.25rem 1px var(--light);
@@ -172,8 +151,7 @@ body {
 .cart-button .cart-icon {
   width: 1rem;
 }
-/* Button stuff ends here */
-/* Search Bar Stuff */
+
 .search-input {
     display: block;
     margin: 0 auto;
@@ -181,14 +159,12 @@ body {
     padding: 0.75rem 1rem;
     width: 60%;
     max-width: 400px;
-
     font-size: 1rem;
     border-radius: 0.5rem;
     border: 2px solid #ffffff80;
     background: #ffffff20;
     color: white;
     text-align: center;
-
     outline: none;
     transition: 0.2s;
 }
@@ -197,12 +173,95 @@ body {
     border-color: cyan;
     background: #3ecc45;
 }
-/* Search Bar Stuff Ends Here */
 
-.DisclaimerFont
-{
-      text-align: center;
+.DisclaimerFont {
+    text-align: center;
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 2rem;
     color: rgb(185, 34, 34);
+}
+
+.secret-body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 2rem 1rem;
+    box-sizing: border-box;
+}
+
+.secret-panel {
+    width: min(100%, 420px);
+    background: rgba(22, 22, 40, 0.82);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 1.25rem;
+    padding: 2rem;
+    box-shadow: 0 1.5rem 3rem rgba(0, 0, 0, 0.25);
+}
+
+.secret-title {
+    font-size: 2.2rem;
+    margin: 0 0 0.5rem;
+}
+
+.secret-subtitle {
+    font-size: 1.1rem;
+    margin: 0 0 1rem;
+    color: rgb(33, 235, 235);
+}
+
+.secret-input {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 1rem;
+    padding: 0.9rem 1rem;
+    border-radius: 0.75rem;
+    border: 2px solid rgba(255, 255, 255, 0.25);
+    background: rgba(255, 255, 255, 0.08);
+    color: white;
+    font-size: 1rem;
+    outline: none;
+}
+
+.secret-input:focus {
+    border-color: cyan;
+    background: rgba(44, 211, 255, 0.1);
+}
+
+.secret-button {
+    width: 100%;
+    margin-top: 1rem;
+    padding: 0.9rem 1rem;
+    border: none;
+    border-radius: 0.75rem;
+    background: linear-gradient(135deg, #ee2d5d, #ff7d55);
+    color: white;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.secret-button:hover {
+    transform: translateY(-1px);
+}
+
+.secret-message {
+    min-height: 1.5rem;
+    margin-top: 0.75rem;
+    text-align: center;
+    color: #ffd6d6;
+    font-size: 0.95rem;
+}
+
+@media (max-width: 600px) {
+    .FontCenterChange {
+        font-size: 2.2rem;
+    }
+
+    .SmallerFontCenter {
+        font-size: 1.5rem;
+    }
 }
