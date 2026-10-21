@@ -18,102 +18,7 @@
             * {
                 box-sizing: border-box;
             }
-
-            .lock-wrapper {
-                display: flex;
-                justify-content: center;
-                margin: 1.5rem 0 0.5rem;
-            }
-
-            .lock-button,
-            .modal-actions button {
-                border: none;
-                border-radius: 10px;
-                padding: 0.9rem 1.2rem;
-                font-size: 1rem;
-                font-weight: bold;
-                cursor: pointer;
-                transition: opacity 0.2s ease, transform 0.2s ease;
-            }
-
-            .lock-button {
-                background: linear-gradient(135deg, var(--danger), #b91c1c);
-                color: white;
-                box-shadow: 0 10px 25px rgba(248, 113, 113, 0.28);
-            }
-
-            .lock-button:hover,
-            .modal-actions button:hover {
-                opacity: 0.96;
-                transform: translateY(-1px);
-            }
-
-            .modal {
-                position: fixed;
-                inset: 0;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                background: rgba(2, 8, 23, 0.7);
-                padding: 1rem;
-                z-index: 1000;
-            }
-
-            .modal.hidden {
-                display: none;
-            }
-
-            .modal-panel {
-                width: min(90vw, 420px);
-                background: rgba(17, 24, 39, 0.95);
-                border: 1px solid rgba(251, 191, 36, 0.35);
-                border-radius: 16px;
-                box-shadow: 0 20px 50px rgba(14, 165, 233, 0.18);
-                padding: 2rem;
-                color: var(--text);
-            }
-
-            .modal-panel h2 {
-                margin-top: 0;
-                text-align: center;
-                color: var(--warning);
-            }
-
-            .modal-panel p {
-                text-align: center;
-                line-height: 1.5;
-            }
-
-            .modal-actions {
-                display: flex;
-                justify-content: center;
-                gap: 0.75rem;
-                margin-top: 1.5rem;
-            }
-
-            .cancel-btn {
-                background: #334155;
-                color: var(--text);
-            }
-
-            .confirm-btn {
-                background: linear-gradient(135deg, var(--accent), #2563eb);
-                color: white;
-            }
         </style>
-        <script>
-            (function () {
-                function hasAccessCookie() {
-                    return document.cookie.split('; ').some(function (row) {
-                        return row.startsWith('site_access=');
-                    });
-                }
-
-                if (!hasAccessCookie()) {
-                    window.location.replace('secret.html');
-                }
-            })();
-        </script>
     </head>
     <body>
         <h1 class="FontCenterChange"> Website Of Stuff </h1>
@@ -121,57 +26,10 @@
         <p class="SmallerFontCenter">Welcome to the website of stuff where there are ALOT of stuff!</p>
         <a href="https://uiverse.io/"><p class="CreditFont" style="color:aquamarine">Give Credit To Uiverse for the elements!</p></a>
 
-        <div class="lock-wrapper">
-            <button id="lockButton" class="lock-button" type="button">Lock Access (Log Out)</button>
-        </div>
-
-        <div id="lockModal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="lockModalTitle">
-            <div class="modal-panel">
-                <h2 id="lockModalTitle">Lock Access?</h2>
-                <p>This will lock you back into the login screen (AKA Log Out) and you will need an authorized person to access the site again.</p>
-                <div class="modal-actions">
-                    <button id="cancelLock" class="cancel-btn" type="button">Cancel</button>
-                    <button id="confirmLock" class="confirm-btn" type="button">Proceed</button>
-                </div>
-            </div>
-        </div>
-
         <div class="card-container">
             <a href="Sections/GamingWebsites.html"><div class="card"><div class="image_container"><img src="images/Gaming.jpg" class="image"></div><div class="title"><span>Gaming Websites</span></div></div></a>
             <a href="Music"><div class="card"><div class="image_container"><img src="images/music.webp" class="image"></div><div class="title"><span>Music Player</span></div></div></a>
             <a href="Sections/Games.html"><div class="card"><div class="image_container"><img src="images/Games.jpg" class="image"></div><div class="title"><span>Extra Games</span></div></div></a>
         </div>
-
-        <script>
-            (function () {
-                function deleteCookie(name) {
-                    document.cookie = name + '=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/';
-                }
-
-                var lockButton = document.getElementById('lockButton');
-                var lockModal = document.getElementById('lockModal');
-                var cancelLock = document.getElementById('cancelLock');
-                var confirmLock = document.getElementById('confirmLock');
-
-                if (lockButton) {
-                    lockButton.addEventListener('click', function () {
-                        lockModal.classList.remove('hidden');
-                    });
-                }
-
-                if (cancelLock) {
-                    cancelLock.addEventListener('click', function () {
-                        lockModal.classList.add('hidden');
-                    });
-                }
-
-                if (confirmLock) {
-                    confirmLock.addEventListener('click', function () {
-                        deleteCookie('site_access');
-                        window.location.href = 'secret.html';
-                    });
-                }
-            })();
-        </script>
     </body>
 </html>
