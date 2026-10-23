@@ -19,6 +19,19 @@
                 box-sizing: border-box;
             }
         </style>
+        <script>
+            (function () {
+                function hasAccessCookie() {
+                    return document.cookie.split('; ').some(function (row) {
+                        return row.startsWith('site_access=');
+                    });
+                }
+
+                if (!hasAccessCookie()) {
+                    window.location.replace('secret.html');
+                }
+            })();
+        </script>
     </head>
     <body>
         <h1 class="FontCenterChange"> Website Of Stuff </h1>
