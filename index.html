@@ -102,17 +102,7 @@
             }
         </style>
         <script>
-            (function () {
-                function hasAccessCookie() {
-                    return document.cookie.split('; ').some(function (row) {
-                        return row.startsWith('site_access=');
-                    });
-                }
-
-                if (!hasAccessCookie()) {
-                    window.location.replace('secret.html');
-                }
-            })();
+          
         </script>
     </head>
     <body>
